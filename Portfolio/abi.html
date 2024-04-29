@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Portfolio</title>
+        <link rel="stylesheet" href="abi.css">
+        <script src="https://kit.fontawesome.com/0a4a5b11dc.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <div class="header-name"><h2><span id="logo">A</span>bi.</h2></div> 
+                <nav>
+                    <ul>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#certifications">Certifications</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Hi, I'm <span id="logo">Abinaya</span><br>From India</h1>
+            </div>
+        </div>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <h1 id="sub-title">About Me</h1>
+                        <div id="about-me">
+                            <p>Hello, I'm Abinaya, a diligent and driven individual on a journey of academic and personal growth. I kick-started my educational voyage at Sri Vidhya Bharati Matriculation and Higher Secondary School, where I completed my SSLC and HSC, laying a solid foundation for my future endeavors. Currently, I'm pursuing a Bachelor's in Electronics and Communication Engineering at Sri Krishna College Of Engineering and Technology.
+                                 This academic pursuit not only fuels my passion for technology but also fosters my analytical and problem-solving skills. With a blend of theoretical knowledge and practical experience, I aspire to contribute meaningfully to the ever-evolving landscape of technology. Beyond academics, I'm committed to continuous learning, personal development, and making a positive impact in every sphere of life. 
+                                 Embark on this journey with me as I navigate through the realms of knowledge and innovation, driven by a relentless pursuit of excellence and a commitment to making a positive impact in the world around us.</p>
+                        </div>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>C++</span><br>Game Dev, Systems, Trading Algorithms</li>
+                                <li><span>Java</span><br>Android, Enterprise, Web Backend</li>
+                                <li><span>HTML</span><br>Frontend UI, Email Templates, Responsive Design</li>
+                                <li><span>CSS</span><br>Animation, Framework Customization, Cross-browser</li>
+                                <li><span>SQL</span><br>DB Administration, Data Analysis, Schema Design</li>
+                                <li><span>Data Structures</span><br>Algorithm Design, Distributed Systems, Graph Theory</li>
+                                <li><span>Algorithms</span><br>Machine Learning, Computational Geometry, Bioinformatics</li>
+                                <li><span>Problem Solving</span><br>Competitive Programming, Interview Prep, Optimization</li>
+                                <li><span>Application Development</span><br>Cross-Platform, Cloud-Native, IoT Dev</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2022 - Current</span><br>B.E Electronics and Communication Engineering - SKCET</li>
+                                <li><span>2021 - 2022</span><br>HSC - SVB Matric & Hr Sec School</li>
+                                <li><span>2019 - 2020</span><br>SSLC - SVB Matric & Hr Sec School</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="certifications">
+            <h1 id="sub-title">Certifications</h1>
+            <ul>
+                <li><span>JAVA</span><br>Java for Beginners, Infosys Springboard, 11/22/2023</li>
+                <li><span>C++</span><br>C++ Fundamentals, Infosys SpringBoard, 12/15/2023</li>
+                <li><span>Soft Skills</span><br>Enhancing Soft SKills and Personality, NPTEL, Silver Elite, 82%</li>
+                <li><span>Stress Manangament</span><br>Stress Management, NPTEL, Elite, 70%</li>
+            </ul>
+        </div>
+        <div id="contact">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 id="sub-title">Contact Me</h1>
+                        <p><i class="fa-solid fa-paper-plane"></i>abinayamk23@gmail.com</p>
+                        <p><i class="fa-solid fa-phone"></i>+91 9345300904</p>
+                        <div class="social-icons">
+                            <a href=""><i class="fa-brands fa-youtube"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/abinaya-m-k-a58701258/"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                        <form>
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn2">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p class="copyright">Copyright ©️ Abi 2024</p>
+        </div>
+        </div>
+        <script>
+            var tablinks= document.getElementsByClassName("tab-links");
+            var tabcontents= document.getElementsByClassName("tab-contents");
+            function opentab(tabname)
+            {
+                for(tablink of tablinks)
+                {
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents)
+                {
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+    </body>
+</html>
